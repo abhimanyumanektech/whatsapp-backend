@@ -1,5 +1,13 @@
 import User from "../model/User.js";
 
+export const homeScreen = async (req, res) => {
+  try {
+    return res.status(200).json({ message: "Hello World!" });
+  } catch (error) {
+    return res.status(500).send(error);
+  }
+};
+
 export const addUser = async (req, res) => {
   console.log(req.body);
   try {
